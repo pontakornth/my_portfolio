@@ -1,0 +1,45 @@
+/* @import "./mixins.scss"; */
+@import "../node_modules/bulma/sass/utilities/functions.sass";
+html {
+  scroll-behavior:smooth;
+  font-family: "Bai Jamjuree", serif;
+}
+h1,h2,h3,h4,h5,h6, .is-header {
+  font-family: "Chakra Petch", sans-serif;
+}
+p, .is-content {
+  font-family: "Bai Jamjuree", serif;
+}
+img {
+  image-orientation: from-image;
+}
+.max-height {
+  min-height: 100vh;
+}
+
+.feature {
+  background-color: rgba(245,245,245,0.2);
+  min-height: 80vh;
+}
+/*
+.middle {
+  display: flex;
+  align-content: center;
+  min-height: 
+} */
+$primary: #F18F01;
+$link: #9A5C01;
+$info: #747F89;
+$danger: #F71735;
+$success: #93C0A4;
+$warning: #E8CB3A;
+$primary-invert: findColorInvert($primary);
+$link-invert: findColorInvert($link);
+$info-invert: findColorInvert($info);
+$danger-invert: findColorInvert($danger);
+$success-invert: findColorInvert($success);
+$warning-invert: findColorInvert($warning);
+
+
+
+@import '../node_modules/bulma/bulma.sass';
