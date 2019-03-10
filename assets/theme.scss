@@ -2,13 +2,10 @@
 @import "../node_modules/bulma/sass/utilities/functions.sass";
 html {
   scroll-behavior:smooth;
-  font-family: "Bai Jamjuree", serif;
+  font-family: "Bai Jamjuree", sans-serif;
 }
-h1,h2,h3,h4,h5,h6, .is-header {
+h1,h2,h3,h4,h5,h6, .title {
   font-family: "Chakra Petch", sans-serif;
-}
-p, .is-content {
-  font-family: "Bai Jamjuree", serif;
 }
 img {
   image-orientation: from-image;
@@ -27,6 +24,7 @@ img {
   align-content: center;
   min-height: 
 } */
+$body-family: "Bai Jamjuree", serif;
 $primary: #F18F01;
 $link: #9A5C01;
 $info: #747F89;
@@ -43,3 +41,4 @@ $warning-invert: findColorInvert($warning);
 
 
 @import '../node_modules/bulma/bulma.sass';
+@import '~buefy/src/scss/buefy';

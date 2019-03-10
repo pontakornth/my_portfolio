@@ -1,3 +1,4 @@
+// eslint-disable-next-line nuxt/no-cjs-in-config
 const pkg = require('./package')
 
 // eslint-disable-next-line nuxt/no-cjs-in-config
@@ -14,7 +15,14 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Bai+Jamjuree|Chakra+Petch&amp'
+      }
+    ]
   },
 
   /*
@@ -25,7 +33,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@/assets/theme.scss'],
+  css: ['@/assets/typography.scss', '@/assets/theme.scss'],
 
   /*
   ** Plugins to load before mounting the App
