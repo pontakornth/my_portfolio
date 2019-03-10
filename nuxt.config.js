@@ -1,5 +1,6 @@
 const pkg = require('./package')
 
+// eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {
   mode: 'spa',
 
@@ -24,7 +25,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['@/assets/theme.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -36,6 +37,7 @@ module.exports = {
   */
   modules: [
     // Doc: https://buefy.github.io/#/documentation
+    '@nuxtjs/style-resources',
     'nuxt-buefy',
     '@nuxtjs/pwa'
   ],
