@@ -33,7 +33,13 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@/assets/typography.scss', '@/assets/theme.scss'],
+  css: [
+    '@/assets/typography.scss',
+    '@/assets/theme.scss',
+    '@fortawesome/fontawesome-free/scss/fontawesome.scss',
+    '@fortawesome/fontawesome-free/scss/solid.scss',
+    '@fortawesome/fontawesome-free/scss/brands.scss'
+  ],
 
   /*
   ** Plugins to load before mounting the App
@@ -47,6 +53,7 @@ module.exports = {
     // Doc: https://buefy.github.io/#/documentation
     '@nuxtjs/style-resources',
     'nuxt-buefy',
+    'nuxt-imagemin',
     '@nuxtjs/pwa'
   ],
 
