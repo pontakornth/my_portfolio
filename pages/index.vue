@@ -1,45 +1,43 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github-circle"
-      >
-        Open source on <a href="https://github.com/buefy/buefy"> GitHub</a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">Every</b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">Vue.js</a> and <a href="http://bulma.io/">Bulma</a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+  <section>
+    <div class="hero is-primary is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="title">
+                Pontakorn Paesaeng
+              </h1>
+              <h2 class="subtitle">
+                A student who can code.
+              </h2>
+              <LinkButton to="/about" class="is-info">
+                เกี่ยวกับผม
+              </LinkButton>
+              <LinkButton to="/games" class="is-link">
+                เล่นเกม
+              </LinkButton>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-import Card from '~/components/Card'
-
+// import Card from '~/components/Card'
+import LinkButton from '~/components/LinkButton'
 export default {
   name: 'HomePage',
 
   components: {
-    Card
+    LinkButton
+  },
+  data() {
+    return {
+      bgUrl: '~/assets/hero-bg.jpg'
+    }
   }
 }
 </script>

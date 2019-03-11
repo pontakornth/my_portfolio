@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header is-primary"
       role="navigation"
       aria-label="main navigation"
     >
@@ -10,11 +10,9 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          <h1>
+            Pontakorn Paesaeng
+          </h1>
         </a>
 
         <div class="navbar-burger">
@@ -24,12 +22,7 @@
         </div>
       </div>
     </nav>
-
-    <section class="main-content columns is-centered">
-      <div class="container column is-10">
-        <nuxt />
-      </div>
-    </section>
+    <nuxt />
   </div>
 </template>
 
