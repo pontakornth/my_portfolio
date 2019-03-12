@@ -1,43 +1,33 @@
 <template>
-  <section>
-    <div class="hero is-primary is-fullheight">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns">
-            <div class="column">
-              <h1 class="title">
-                Pontakorn Paesaeng
-              </h1>
-              <h2 class="subtitle">
-                A student who can code.
-              </h2>
-              <LinkButton to="/about" class="is-info">
-                เกี่ยวกับผม
-              </LinkButton>
-              <LinkButton to="/games" class="is-link">
-                เล่นเกม
-              </LinkButton>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="section">
+    <control-panel />
+    <shop />
+    <div class="level container">
+      <inventory :items="allItems" />
     </div>
   </section>
 </template>
 
 <script>
-// import Card from '~/components/Card'
-import LinkButton from '~/components/LinkButton'
+import Shop from '@/components/Shop'
+import Inventory from '@/components/Inventory'
+import ControlPanel from '@/components/ControlPanel'
+import { mapGetters } from 'vuex'
+// import LinkButton from '~/components/LinkButton'
 export default {
   name: 'HomePage',
-
   components: {
-    LinkButton
+    Inventory,
+    ControlPanel,
+    Shop
   },
   data() {
     return {
       bgUrl: '~/assets/hero-bg.jpg'
     }
+  },
+  computed: {
+    ...mapGetters({ allItems: 'shop/allItemsInStock' })
   }
 }
 </script>

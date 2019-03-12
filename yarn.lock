@@ -1271,6 +1271,21 @@
   dependencies:
     hash-sum "^1.0.2"
 
+"@nuxtjs/markdownit-loader@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/markdownit-loader/-/markdownit-loader-1.1.1.tgz#7223b49064a176394f6f82aad3bf622069004799"
+  dependencies:
+    highlight.js "^9.12.0"
+    loader-utils "^1.1.0"
+    markdown-it "^8.3.1"
+
+"@nuxtjs/markdownit@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/markdownit/-/markdownit-1.2.3.tgz#0d90839a73da324fbc68ac7d7f18c65eb48b35d2"
+  dependencies:
+    "@nuxtjs/markdownit-loader" "^1.1.1"
+    raw-loader "^1.0.0"
+
 "@nuxtjs/meta@^2.6.0":
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.6.0.tgz#cc8fd2a019fb3e2e1feaa78abefee3a6a6aed477"
@@ -3638,7 +3653,7 @@ enhanced-resolve@^4.1.0:
     memory-fs "^0.4.0"
     tapable "^1.0.0"
 
-entities@^1.1.1:
+entities@^1.1.1, entities@~1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
 
@@ -4813,6 +4828,10 @@ he@1.2.x, he@^1.1.0:
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
+
+highlight.js@^9.12.0:
+  version "9.15.6"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.15.6.tgz#72d4d8d779ec066af9a17cb14360c3def0aa57c4"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -6107,6 +6126,12 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+linkify-it@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-2.1.0.tgz#c4caf38a6cd7ac2212ef3c7d2bde30a91561f9db"
+  dependencies:
+    uc.micro "^1.0.1"
+
 load-bmfont@^1.3.1, load-bmfont@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/load-bmfont/-/load-bmfont-1.4.0.tgz#75f17070b14a8c785fe7f5bee2e6fd4f98093b6b"
@@ -6353,6 +6378,16 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
+markdown-it@^8.3.1:
+  version "8.4.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
+  dependencies:
+    argparse "^1.0.7"
+    entities "~1.1.1"
+    linkify-it "^2.0.0"
+    mdurl "^1.0.1"
+    uc.micro "^1.0.5"
+
 md5.js@^1.3.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/md5.js/-/md5.js-1.3.5.tgz#b5d07b8e3216e3e27cd728d72f70d1e6a342005f"
@@ -6364,6 +6399,10 @@ md5.js@^1.3.4:
 mdn-data@~1.1.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-1.1.4.tgz#50b5d4ffc4575276573c4eedb8780812a8419f01"
+
+mdurl@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
 media-typer@0.3.0:
   version "0.3.0"
@@ -8175,6 +8214,13 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
+raw-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-1.0.0.tgz#3f9889e73dadbda9a424bce79809b4133ad46405"
+  dependencies:
+    loader-utils "^1.1.0"
+    schema-utils "^1.0.0"
+
 rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
@@ -9492,6 +9538,10 @@ typedarray@^0.0.6:
 ua-parser-js@^0.7.19:
   version "0.7.19"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
+
+uc.micro@^1.0.1, uc.micro@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/uc.micro/-/uc.micro-1.0.6.tgz#9c411a802a409a91fc6cf74081baba34b24499ac"
 
 uglify-js@3.4.x, uglify-js@^3.1.4:
   version "3.4.9"

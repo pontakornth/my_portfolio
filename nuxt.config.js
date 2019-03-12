@@ -54,8 +54,12 @@ module.exports = {
     '@nuxtjs/style-resources',
     'nuxt-buefy',
     'nuxt-imagemin',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/markdownit'
   ],
+  markdownit: {
+    injected: true
+  },
 
   /*
   ** Build configuration

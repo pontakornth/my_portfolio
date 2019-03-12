@@ -17,10 +17,16 @@
 
 <script>
 export default {
+  name: 'Card',
   props: {
     title: {
       type: String,
       required: true
+    },
+    size: {
+      type: Number,
+      required: false,
+      default: 3
     }
   }
 }
