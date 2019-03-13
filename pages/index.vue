@@ -1,33 +1,64 @@
 <template>
-  <section class="section">
-    <control-panel />
-    <shop />
-    <div class="level container">
-      <inventory :items="allItems" />
+  <div class="section">
+    <div class="container">
+      <div class="box light-orange has-shadow">
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <box>
+              <h1 class="title is-3">
+                พนธกร แพแสง
+              </h1>
+            </box>
+          </div>
+          <div class="column is-8" />
+          <div class="column is-narrow">
+            <box style="display:flex; justify-content: center;">
+              <figure class="image is-128x128">
+                <img src="~assets/avatar.jpg" alt="Pontakorn Paesaeng">
+              </figure>              
+            </box>
+          </div>
+          <div class="column">
+            <box>
+              <div class="content">
+                <p>
+                  ผมชื่อนายพนธกร แพแสง หรือโมส ปัจจุบันเป็นนักเรียนโรงเรียนสตรีวิทยา ๒ สายการเรียนวิทย์-คณิต เคยเป็นนักเรียนแลกปลี่ยนไปยังประเทศอาร์เจนตินาของโครงการ AFS เมื่อตอนจบ ม.4
+                  เป็นเวลาประมาณ 11 เดือน แล้วก็กลับไปยังประเทศไทย เคยเข้าร่วมกิจกรรมเปิดบ้านของคณะ SIIT ที่สถาบันเทคโนโลยีนานาชาติสิรินธร มหาวิทยาลัยธรรมศาสตร์ และก็เข้าร่วมโครงการ
+                  ToBeIT62 ที่สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง
+                </p>
+                <p>
+                  งานอดิเรกที่ผมทำจะเป็นการเขียนเว็บ เขียนโปรแกรม เล่นเกมโดยเฉพาะเกมมือถือ หรือฟัง podcast นอกจากนี้ว่าง ๆ ผมจะหาที่เรียนพิเศษเพื่อสอบเข้ามหาวิทยาลัย หรือไม่ก็หาหนังสือมาอ่านเล่น
+                  วิชาที่ผมชอบในโรงเรียนจะเป็นวิชาคอมพิวเตอร์ เพราะตรงกับงานอดิเรกของผม และวิชาวิทยาศาสตร์ที่ได้เรียนอะไรที่ท้าทายโดยเฉพาะการทดลอง
+                </p>
+                <p>
+                  ผลงานที่ผมทำส่วนใหญ่จะเป็นผลงานระดับเล็ก และมีผลงานขนาดกลาง ยังไม่ได้ทำผลงานขนาดใหญ่ ผลงานที่ทำจะเป็นการเขียนเว็บทั่วไป และโปรแกรมเล็กน้อย ผมกำลังฝึกหัดการเขียนโปรแกรม
+                  โดยเฉพาะภาษา Javascript และภาษา Python ที่มีแนวโน้มความต้องการสูงในอนาคต
+                </p>
+              </div>
+            </box>
+          </div>
+        </div>
+      </div>
+      <education />
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import Shop from '@/components/Shop'
-import Inventory from '@/components/Inventory'
-import ControlPanel from '@/components/ControlPanel'
-import { mapGetters } from 'vuex'
-// import LinkButton from '~/components/LinkButton'
+import Box from '@/components/Box'
+import Education from '@/components/Education'
 export default {
   name: 'HomePage',
   components: {
-    Inventory,
-    ControlPanel,
-    Shop
+    Box,
+    Education
   },
-  data() {
-    return {
-      bgUrl: '~/assets/hero-bg.jpg'
-    }
-  },
-  computed: {
-    ...mapGetters({ allItems: 'shop/allItemsInStock' })
-  }
+  computed: {},
+  transitions: 'page'
 }
 </script>
+<style>
+.light-orange {
+  background-color: rgb(255, 231, 191);
+}
+</style>

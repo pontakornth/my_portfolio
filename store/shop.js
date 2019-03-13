@@ -1,5 +1,6 @@
+import content from '../contentMap.js'
 export const state = () => ({
-  stock: ['a', 'b'],
+  stock: content,
   cart: [],
   inventory: [],
   money: 0
@@ -10,8 +11,8 @@ export const getters = {
   },
   totalPrice(state) {
     return state.cart.reduce((x, y) => {
-      return x.price + y.price
-    })
+      return x + (y.price || 0)
+    }, 0)
   },
   allItemsInStock(state) {
     return state.stock
@@ -35,18 +36,6 @@ export const mutations = {
   },
   clearCart(state) {
     state.cart = []
-  },
-  addToInventory(state, { item }) {
-    state.cart.push(item)
-  },
-  removeFromInventory(state, { item }) {
-    const index = state.inventory.indexOf(item)
-    if (index > -1) {
-      state.inventory.splice(index, 1)
-    }
-  },
-  clearInventory(state) {
-    state.inventory = []
   },
   addMoney(state, { amount }) {
     state.money += amount
@@ -74,11 +63,10 @@ export const actions = {
       commit('reduceMoney', { amount })
     }
   },
-  buyItems({ commit, state }) {
-    const totalPrice = state.cart.reduce((x, y) => x.price + y.price)
-    if (totalPrice >= state.money) {
-      commit('addToInventory', { items: [...state.cart] })
-      commit('reduceMoney', { amount: totalPrice })
+  buyItem({ commit, state }, item) {
+    if (item.price >= state.money) {
+      commit('addToCart', { items: item })
+      commit('reduceMoney', { amount: item.price })
     }
   }
 }

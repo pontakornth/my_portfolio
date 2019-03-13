@@ -13,6 +13,10 @@ img {
 .max-height {
   min-height: 100vh;
 }
+body {
+  background-color: #474747;
+  min-height: 100vh;
+}
 
 .feature {
   background-color: rgba(245,245,245,0.2);
@@ -24,6 +28,21 @@ img {
   align-content: center;
   min-height: 
 } */
+
+.page-enter-active, .page-leave-active {
+  transition: all .25s ease-out;
+
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+
+
+
+
+
 $body-family: "Bai Jamjuree", serif;
 $primary: #F18F01;
 $link: #9A5C01;
