@@ -39,21 +39,67 @@
           </div>
         </div>
       </div>
-      <education />
+      <div class="separate">
+        <game-lock :gameId="1" :unlocked="isWon(1)">
+          <education />
+        </game-lock>
+      </div>
+      <div class="separate">
+        <game-lock :gameId="2" :unlocked="false">
+          <portfolio />
+        </game-lock>
+      </div>
+      <div class="serparate">
+        <contact />
+      </div>
+      <b-modal :active.sync="educationGame">
+        <image-guessing :gameId="1" />
+      </b-modal>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+import ImageGuessing from '@/components/Games/ImageGuessing.vue'
+import Contact from '@/components/Contact'
+import GameLock from '@/components/GameLock'
 import Box from '@/components/Box'
 import Education from '@/components/Education'
+import Portfolio from '@/components/Portfolio'
 export default {
   name: 'HomePage',
   components: {
     Box,
-    Education
+    Education,
+    Portfolio,
+    GameLock,
+    Contact,
+    ImageGuessing
   },
-  computed: {},
+  computed: {
+    ...mapGetters({
+      isWon: 'game/isWon',
+      isPlaying: 'game/isPlaying'
+    }),
+    educationGame: {
+      get() {
+        return this.isPlaying(1)
+      },
+      set(value) {
+        if (value === false) {
+          this.play(0)
+        } else {
+          this.play(1)
+        }
+      }
+    }
+  },
+  methods: {
+    ...mapActions({
+      play: 'game/play'
+    })
+  },
   transitions: 'page'
 }
 </script>

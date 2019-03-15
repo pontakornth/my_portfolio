@@ -1,0 +1,44 @@
+{
+  "quizzes": [
+    {
+      "imageUrl": "cat.jpg",
+      "choices": [
+        "แมว",
+        "ช้าง",
+        "ยีราฟ",
+        "ฮิปโป"
+      ],
+      "correctAnswer": "แมว"
+    },
+    {
+      "imageUrl": "dog.jpg",
+      "choices": [
+        "ทีเร็กซ์",
+        "หมา",
+        "ปลาทู",
+        "เบจิต้า"
+      ],
+      "correctAnswer": "หมา"
+    },
+    {
+      "imageUrl": "lion.jpg",
+      "choices": [
+        "สิงโต",
+        "สิงเล็ก",
+        "มอเตอร์ไซด์",
+        "หมูป่า"
+      ],
+      "correctAnswer": "สิงโต"
+    },
+    {
+      "imageUrl": "bee.jpg",
+      "choices": [
+        "แมวววววว",
+        "เต้าหู้ทรงเครื่อง",
+        "เทพราเมน 6 วิถี",
+        "ผึ้ง"
+      ],
+      "correctAnswer": "ผึ้ง"
+    }
+  ]
+}
