@@ -13,7 +13,7 @@
       "imageUrl": "undefined",
       "maxHp": 1000,
       "atk": 30,
-      "def": 10,
+      "def": 20,
       "speed": 8
     },
     {
@@ -21,7 +21,7 @@
       "imageUrl": "undefined",
       "maxHp": 2500,
       "atk": 50,
-      "def": 20,
+      "def": 50,
       "speed": 15
 
     }
@@ -32,7 +32,7 @@
       "imageUrl": "undefined",
       "maxHp": 1000,
       "maxMp": 1000,
-      "atk": 10,
+      "atk": 45,
       "def": 20,
       "speed": 10,
       "skills": [
@@ -50,7 +50,7 @@
         },
         {
           "name": "ซูเปอร์โปรแกรมเมอร์",
-          "type": "spd_buff",
+          "type": "def_debuff",
           "value": 15,
           "cost": 800
         }
@@ -61,7 +61,7 @@
       "imageUrl": "undefined",
       "maxHp": 800,
       "maxMp": 1200,
-      "atk": 5,
+      "atk": 35,
       "def": 15,
       "speed": 13,
       "skills": [
@@ -80,8 +80,8 @@
         {
           "name": "เดดไลน์",
           "type": "true_damage",
-          "value": 800,
-          "cost": 100
+          "value": 100,
+          "cost": 800
         }
       ] 
     },
@@ -90,7 +90,7 @@
       "imageUrl": "undefined",
       "maxHp": 650,
       "maxMp": 300,
-      "atk": 13,
+      "atk": 30,
       "def": 7,
       "speed": 20,
       "skills": [
