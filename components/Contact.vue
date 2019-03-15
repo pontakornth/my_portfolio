@@ -8,8 +8,8 @@
           </h3>
           <ul class="fa-ul">
             <li><b-icon class="fa-li" pack="fab" icon="line" />most1562</li>
-            <li><b-icon class="fa-li" pack="fab" icon="facebook" /><a href="https://www.facebook.com/most.terra">Pontakorn Paesaeng</a></li>
-            <li><b-icon class="fa-li" pack="fab" icon="github" /><a href="github.com/pontakornth">pontakornth</a></li>
+            <li><b-icon class="fa-li" pack="fab" icon="facebook" /><a target="_blank" href="https://www.facebook.com/most.terra">Pontakorn Paesaeng</a></li>
+            <li><b-icon class="fa-li" pack="fab" icon="github" /><a target="_blank" href="github.com/pontakornth">pontakornth</a></li>
           </ul>
         </div>
       </div>
