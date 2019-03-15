@@ -1,0 +1,118 @@
+{
+  "monsters": [
+    {
+      "name": "บัคผู้ชั่วร้าย",
+      "imageUrl": "undefined",
+      "maxHp": 400,
+      "atk": 25,
+      "def": 5,
+      "speed": 5
+    },
+    {
+      "name": "ราชาแห่งเออเร่อ",
+      "imageUrl": "undefined",
+      "maxHp": 1000,
+      "atk": 30,
+      "def": 10,
+      "speed": 8
+    },
+    {
+      "name": "พระเจ้าแห่งมัลแวร์",
+      "imageUrl": "undefined",
+      "maxHp": 2500,
+      "atk": 50,
+      "def": 20,
+      "speed": 15
+
+    }
+  ],
+  "classes": [
+    {
+      "name": "โปรแกรมเมอร์",
+      "imageUrl": "undefined",
+      "maxHp": 1000,
+      "maxMp": 1000,
+      "atk": 10,
+      "def": 20,
+      "speed": 10,
+      "skills": [
+        {
+          "name": "พลังคลื่นโค้ด",
+          "type": "damage",
+          "value": 100,
+          "cost": 500
+        },
+        {
+          "name": "หมัดพลังสมอง",
+          "type": "atk_buff",
+          "value": 3,
+          "cost": 300
+        },
+        {
+          "name": "ซูเปอร์โปรแกรมเมอร์",
+          "type": "spd_buff",
+          "value": 15,
+          "cost": 800
+        }
+      ]
+    },
+    {
+      "name": "นักออกแบบ",
+      "imageUrl": "undefined",
+      "maxHp": 800,
+      "maxMp": 1200,
+      "atk": 5,
+      "def": 15,
+      "speed": 13,
+      "skills": [
+        {
+          "name": "พลังสีรุ้ง",
+          "type": "damage_plus",
+          "value": 100,
+          "cost": 600
+        },
+        {
+          "name": "คาถาแยกเลเยอร์",
+          "type": "def_debuff",
+          "value": 3,
+          "cost": 800
+        },
+        {
+          "name": "เดดไลน์",
+          "type": "true_damage",
+          "value": 800,
+          "cost": 100
+        }
+      ] 
+    },
+    {
+      "name": "CEO",
+      "imageUrl": "undefined",
+      "maxHp": 650,
+      "maxMp": 300,
+      "atk": 13,
+      "def": 7,
+      "speed": 20,
+      "skills": [
+        {
+          "name": "ฉันรวย",
+          "type": "atk_debuff",
+          "value": 5,
+          "cost": 150
+        },
+        {
+          "name": "จ้างมันมา",
+          "type": "def_debuff",
+          "value": 5,
+          "cost": 150
+        },
+        {
+          "name": "การลงทุนมีความเสี่ยง",
+          "type": "instant_kill",
+          "value": 25,
+          "cost": 300
+        }
+      ]
+    }
+  ]
+}

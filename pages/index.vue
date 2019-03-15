@@ -45,7 +45,7 @@
         </game-lock>
       </div>
       <div class="separate">
-        <game-lock :gameId="2" :unlocked="false">
+        <game-lock :gameId="2" :unlocked="isWon(2)">
           <portfolio />
         </game-lock>
       </div>
@@ -55,6 +55,9 @@
       <b-modal :active.sync="educationGame">
         <image-guessing :gameId="1" />
       </b-modal>
+      <b-modal :active.sync="projectGame">
+        <fight :gameId="2" />
+      </b-modal>
     </div>
   </div>
 </template>
@@ -62,6 +65,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import ImageGuessing from '@/components/Games/ImageGuessing.vue'
+import Fight from '@/components/Games/Fight.vue'
 import Contact from '@/components/Contact'
 import GameLock from '@/components/GameLock'
 import Box from '@/components/Box'
@@ -75,7 +79,8 @@ export default {
     Portfolio,
     GameLock,
     Contact,
-    ImageGuessing
+    ImageGuessing,
+    Fight
   },
   computed: {
     ...mapGetters({
@@ -91,6 +96,18 @@ export default {
           this.play(0)
         } else {
           this.play(1)
+        }
+      }
+    },
+    projectGame: {
+      get() {
+        return this.isPlaying(2)
+      },
+      set(value) {
+        if (value === false) {
+          this.play(0)
+        } else {
+          this.play(2)
         }
       }
     }

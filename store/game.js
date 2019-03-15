@@ -6,7 +6,10 @@ export const state = () => ({
 
 export const getters = {
   isWon: state => gameId => {
-    return state.completedGames.includes(gameId)
+    return (
+      state.completedGames.includes(gameId) ||
+      state.completedGames.includes(999)
+    )
   },
   isPlaying: state => gameId => {
     return state.currentGame === gameId

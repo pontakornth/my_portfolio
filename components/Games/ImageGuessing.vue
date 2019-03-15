@@ -58,6 +58,7 @@ export default {
           canCancel: false,
           onConfirm: () => {
             this.answerStatus = '(เสร็จล่ะ ปิดได้แล้ว)'
+            this.$parent.close()
             this.win(this.gameId)
           }
         })
