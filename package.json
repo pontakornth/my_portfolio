@@ -1,7 +1,7 @@
 {
-  "name": "quiz_and_port",
+  "name": "pontakorn_port",
   "version": "1.0.0",
-  "description": "A simple math quiz and little portfolio",
+  "description": "Portfolio with simple game to unlock content",
   "author": "Pontakorn Paesaeng",
   "private": true,
   "scripts": {

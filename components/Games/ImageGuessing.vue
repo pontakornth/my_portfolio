@@ -57,6 +57,7 @@ export default {
           message: 'เย้ ถูกเปิดพอร์ต !',
           canCancel: false,
           onConfirm: () => {
+            this.answerStatus = '(เสร็จล่ะ ปิดได้แล้ว)'
             this.win(this.gameId)
           }
         })
