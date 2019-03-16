@@ -58,7 +58,7 @@ export default {
     checkIfWin(answer) {
       if (answer === this.selectedQuiz.correctAnswer) {
         this.dialog.alert({
-          message: 'เย้ ถูกเปิดพอร์ต !',
+          message: 'เย้ ถูก เปิดพอร์ต !',
           canCancel: false,
           onConfirm: () => {
             this.answerStatus = '(เสร็จล่ะ ปิดได้แล้ว)'
