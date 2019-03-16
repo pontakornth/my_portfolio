@@ -85,3 +85,6 @@ sw.*
 
 # Prototype
 *.prototype.py
+
+# Soft delete
+*.not
