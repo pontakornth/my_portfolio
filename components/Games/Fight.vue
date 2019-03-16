@@ -179,6 +179,7 @@ export default {
       if (this.hero.hp <= 0) {
         Dialog.alert('แพ้แล้ว แงๆ')
         this.$parent.close()
+        return
       }
       if (this.monster.hp <= 0) {
         Dialog.alert('เย้ ชนะแล้ว เปิดต่อได้!')
