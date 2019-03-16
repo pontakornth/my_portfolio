@@ -48,7 +48,7 @@
                   ฟื้นฟู
                 </button>
               </div>
-              <div v-for="(skill, index) in hero.skills" :key="index" class="column is-6">
+              <div v-for="(skill, index) in hero.skills" :key="index" class="column is-narrow">
                 <button @click="useSkill(skill)" :disabled="hero.mp <= skill.cost" class="button is-success">
                   {{ skill.name }}
                 </button>
@@ -160,6 +160,15 @@ export default {
         this.useAction(command)
         this.monsterAttack()
       }
+      if (this.hero.hp <= 0) {
+        Dialog.alert('แพ้แล้ว แงๆ')
+        this.$parent.close()
+      }
+      if (this.monster.hp <= 0) {
+        Dialog.alert('เย้ ชนะแล้ว เปิดต่อได้!')
+        this.win(this.gameId)
+        this.$parent.close()
+      }
     },
     monsterAttack() {
       this.hero.hp -= this.getMonStat('atk') * 3 - this.getHeroStat('def') * 2
@@ -174,7 +183,7 @@ export default {
           }
           break
         case 'heal':
-          const heal = Math.floor(Math.random() * this.hero.maxHp)
+          const heal = Math.floor((Math.random() * this.hero.maxHp) / 4)
           if (heal + this.hero.hp > this.hero.maxHp) {
             this.hero.hp = this.hero.maxHp
           } else {
@@ -228,17 +237,8 @@ export default {
               break
           }
       }
-      if (this.hero.hp <= 0) {
-        Dialog.alert('แพ้แล้ว แงๆ')
-        this.$parent.close()
-      }
-      if (this.monster.hp <= 0) {
-        Dialog.alert('เย้ ชนะแล้ว เปิดต่อได้!')
-        this.win(this.gameId)
-        this.$parent.close()
-      }
 
-      const manaHeal = Math.floor(Math.random() * this.hero.maxMp)
+      const manaHeal = Math.floor((Math.random() * this.hero.maxMp) / 4)
       if (manaHeal + this.hero.mp >= this.hero.maxMp) {
         this.hero.mp = this.hero.maxMp
       } else {

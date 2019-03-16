@@ -110,7 +110,7 @@
           "name": "การลงทุนมีความเสี่ยง",
           "type": "instant_kill",
           "value": 25,
-          "cost": 300
+          "cost": 150
         }
       ]
     }
