@@ -38,12 +38,12 @@
               MP: {{ hero.mp }}/{{ hero.maxMp }}
             </p>
             <div class="columns is-multiline is-centered">
-              <div class="column is-6">
+              <div class="column is-6-mobile">
                 <button @click="executeCommand({ command: 'attack' })" class="button is-success">
                   โจมตี
                 </button>
               </div>
-              <div class="column is-6">
+              <div class="column is-6-mobile">
                 <button @click="executeCommand({ command: 'heal' })" class="button is-success">
                   ฟื้นฟู
                 </button>
@@ -52,9 +52,7 @@
                 <button @click="useSkill(skill)" :disabled="hero.mp <= skill.cost" class="button is-success">
                   {{ skill.name }}
                 </button>
-                <p>
-                  {{ getSkillDesc(skill) }}
-                </p>
+                {{ getSkillDesc(skill) }}
               </div>
             </div>
           </div>
