@@ -19,14 +19,37 @@
           กิจกรรม
         </h3>
       </box>
+      <div class="columns is-multiline">
+        <card class="is-12-mobile is-6-desktop" title="โครงการนักเรียนแลกเปลี่ยน AFS">
+          <figure class="image is-3x4">
+            <img src="~assets/AFS.jpg" alt="AFS Photo">
+          </figure>
+        </card>
+        <card class="is-12-mobile is-6-desktop" title="ค่าย SIIT Open House">
+          <figure class="image is-3x4">
+            <img src="~assets/SIIT_MOST.jpg" alt="SIIT Photo">
+          </figure>
+        </card>
+        <card class="is-12-mobile is-6-desktop" title="ค่ายติว ToBeIT62 ที่สถาบันเทคโนโลยีพระจอมเกล้าคุณทหารลาดกระบัง">
+          <figure class="image is-3x4">
+            <img src="~assets/tobeit.jpg" alt="Tobeit 62 photo">
+          </figure>
+        </card>
+        <card class="is-12-mobile is-6-desktop" title="กิจกรรมสภาจำลองร่วมกับคณะรัฐศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย">
+          <figure class="image is-3x4">
+            <img src="~assets/govsim.jpg" alt="government simulation photo">
+          </figure>
+        </card>
+      </div>
     </div>
   </div>
 </template>
 <script>
 import ProjectCard from '@/components/ProjectCard'
+import Card from '@/components/Card'
 import Box from '@/components/Box'
 export default {
-  components: { Box, ProjectCard }
+  components: { Box, ProjectCard, Card }
 }
 </script>
 
