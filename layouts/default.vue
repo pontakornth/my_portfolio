@@ -15,7 +15,7 @@
           </h1>
         </a>
       </div>
-      <div class="navbar-menu is-active">
+      <div :class="style()">
         <div class="navbar-end">
           <a @click="cheat" class="navbar-item"> กดสูตรตรงนี้ </a>
         </div>
@@ -26,12 +26,24 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
+  computed: {
+    ...mapGetters({
+      isCompleted: 'game/isCompleted'
+    })
+  },
   methods: {
     ...mapActions({
       cheat: 'game/cheat'
-    })
+    }),
+    style() {
+      return {
+        'navbar-menu': true,
+        'is-active': true,
+        'is-hidden': this.isCompleted
+      }
+    }
   }
 }
 </script>

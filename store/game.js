@@ -15,6 +15,12 @@ export const getters = {
   },
   isPlaying: state => gameId => {
     return state.currentGame === gameId
+  },
+  isCompleted: state => {
+    return (
+      (state.completedGames.includes(1) && state.completedGames.includes(2)) ||
+      state.completedGames.includes(999)
+    )
   }
 }
 
