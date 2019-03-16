@@ -1,8 +1,8 @@
-# quiz_and_port
+# My portfolio
 
-> A simple math quiz and little portfolio
+> A really simple portfolio with two game to unlock content
 
-## Build Setup
+## Local setup
 
 ``` bash
 # install dependencies
@@ -20,3 +20,8 @@ $ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## Libraries used:
+- NuxtJs
+- Buefy
+- Bulma
