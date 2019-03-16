@@ -40,14 +40,20 @@
               พลังโจมตี : {{ getHeroStat('atk') }}<br>
               พลังป้องกัน : {{ getHeroStat('def') }}<br>
             </p>
-            <div class="columns is-multiline is-centered">
-              <div class="column is-flex is-6-mobile" style="justify-content: space-around">
-                <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
-                  โจมตี
-                </buton>
-                <button @click="executeCommand({ command: 'heal' })" class="button is-success">
-                  ฟื้นฟู
-                </button>
+            <div class="columns is-multiline">
+              <div class="column is-6-mobile">
+                <div class="columns is-centered">
+                  <div class="column is-4-mobile">
+                    <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
+                      โจมตี
+                    </buton>
+                  </div>
+                  <div class="column is-4-mobile">
+                    <button @click="executeCommand({ command: 'heal' })" class="button is-success">
+                      ฟื้นฟู
+                    </button>
+                  </div>
+                </div>
               </div>
               <div class="column is-12 has-text-left" />
               <div v-for="(skill, index) in hero.skills" :key="index" class="column is-narrow">

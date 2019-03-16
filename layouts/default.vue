@@ -17,7 +17,7 @@
       </div>
       <div :class="style()">
         <div class="navbar-end">
-          <a @click="cheat" class="navbar-item"> กดสูตรตรงนี้ </a>
+          <a @click="cheat" class="navbar-item has-text-light"> กดสูตรตรงนี้ </a>
         </div>
       </div>
     </nav>
@@ -41,7 +41,9 @@ export default {
       return {
         'navbar-menu': true,
         'is-active': true,
-        'is-hidden': this.isCompleted
+        'is-hidden': this.isCompleted,
+        'has-background-info': true,
+        'has-text-light': true
       }
     }
   }

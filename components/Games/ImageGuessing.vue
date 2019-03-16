@@ -12,8 +12,12 @@
               <img :src="selectedQuiz.imageUrl">
             </figure>
           </div>
-          <div class="column is-12 has-offset-8 is-flex" style="justify-content:space-evenly">
-            <a v-for="choice in selectedQuiz.choices" :key="choice" v-on:click="checkIfWin(choice)" class="button is-primary">{{ choice }}</a>
+          <div class="column is-12 has-offset-8">
+            <span class="columns is-multiline">
+              <div v-for="choice in selectedQuiz.choices" :key="choice" class="column">
+                <a v-on:click="checkIfWin(choice)" class="level-item button is-primary">{{ choice }}</a>
+              </div>
+            </span>
           </div>
         </div>
       </div>
