@@ -53,9 +53,9 @@
                 <div class="level is-mobile">
                   <div class="level-left">
                     <span class="level-item">
-                      <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
+                      <button @click="executeCommand({ command: 'attack' })" class="button is-success">
                         โจมตี
-                      </buton>
+                      </button>
                     </span>
                     <span class="level-item">
                       <button @click="executeCommand({ command: 'heal' })" class="button is-success">
@@ -182,9 +182,14 @@ export default {
         return
       }
       if (this.monster.hp <= 0) {
-        Dialog.alert('เย้ ชนะแล้ว เปิดต่อได้!')
-        this.win(this.gameId)
-        this.$parent.close()
+        Dialog.alert({
+          message: 'เย้ ชนะแล้ว เปิดพอร์ตได้!',
+          canCancel: false,
+          onConfirm: () => {
+            this.$parent.close()
+            this.win(this.gameId)
+          }
+        })
       }
     },
     monsterAttack() {
