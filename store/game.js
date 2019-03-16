@@ -1,6 +1,8 @@
+import { Dialog } from 'buefy/dist/components/dialog'
+import { Toast } from 'buefy/dist/components/toast'
 export const state = () => ({
   completedGames: [],
-  passcode: 'JWC4826159357',
+  passcode: 'H2SO4',
   currentGame: 0
 })
 
@@ -32,12 +34,21 @@ export const actions = {
   completeGame({ commit }, gameId) {
     commit('completeGame', { gameId: gameId })
   },
-  cheat({ commit, state }, givenPasscode) {
-    if (givenPasscode === state.passcode) {
-      commit('cheat')
-    } else {
-      throw Error("No, that's wrong!")
-    }
+  cheat({ commit, state }) {
+    Dialog.prompt({
+      message: 'ใส่สูตรโกง',
+      inputAttrs: {
+        placeholder: 'คำใบ้: กรดแก่ 1 ครั้ง'
+      },
+      onConfirm: givenPasscode => {
+        if (givenPasscode === state.passcode) {
+          Toast.open('ผ่านแล้วจ้า')
+          commit('cheat')
+        } else {
+          Toast.open('สูตรผิดล่ะ')
+        }
+      }
+    })
   },
   play({ commit }, gameId) {
     commit('play', { gameId })
