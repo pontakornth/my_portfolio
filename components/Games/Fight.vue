@@ -35,19 +35,21 @@
             <p>
               {{ hero.name }}<br>
               HP: {{ hero.hp }}/{{ hero.maxHp }}<br>
-              MP: {{ hero.mp }}/{{ hero.maxMp }}
+              MP: {{ hero.mp }}/{{ hero.maxMp }}<br>
+              ความเร็ว : {{ getHeroStat('speed') }}<br>
+              พลังโจมตี : {{ getHeroStat('atk') }}<br>
+              พลังป้องกัน : {{ getHeroStat('def') }}<br>
             </p>
             <div class="columns is-multiline is-centered">
-              <div class="column is-6-mobile">
-                <button @click="executeCommand({ command: 'attack' })" class="button is-success">
+              <div class="column is-flex is-6-mobile" style="justify-content: space-around">
+                <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
                   โจมตี
-                </button>
-              </div>
-              <div class="column is-6-mobile">
+                </buton>
                 <button @click="executeCommand({ command: 'heal' })" class="button is-success">
                   ฟื้นฟู
                 </button>
               </div>
+              <div class="column is-12 has-text-left" />
               <div v-for="(skill, index) in hero.skills" :key="index" class="column is-narrow">
                 <button @click="useSkill(skill)" :disabled="hero.mp <= skill.cost" class="button is-success">
                   {{ skill.name }}
