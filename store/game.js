@@ -53,7 +53,9 @@ export const actions = {
         } else {
           Toast.open('สูตรผิดล่ะ')
         }
-      }
+      },
+      cancelText: 'ไม่เอา',
+      confirmText: 'ฮ่า ๆ'
     })
   },
   play({ commit }, gameId) {

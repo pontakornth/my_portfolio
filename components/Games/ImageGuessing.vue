@@ -64,7 +64,8 @@ export default {
             this.answerStatus = '(เสร็จล่ะ ปิดได้แล้ว)'
             this.$parent.close()
             this.win(this.gameId)
-          }
+          },
+          confirmText: 'เยี่ยม'
         })
       } else {
         this.dialog.alert('ว้าย ผิด')

@@ -177,7 +177,10 @@ export default {
         this.monsterAttack()
       }
       if (this.hero.hp <= 0) {
-        Dialog.alert('แพ้แล้ว แงๆ')
+        Dialog.alert({
+          message: 'แพ้แล้ว แง ๆ',
+          confirmText: 'แง ๆ'
+        })
         this.$parent.close()
         return
       }
@@ -188,7 +191,8 @@ export default {
           onConfirm: () => {
             this.$parent.close()
             this.win(this.gameId)
-          }
+          },
+          confirmText: 'เยี่ยม'
         })
       }
     },
