@@ -6,10 +6,14 @@
           <h6 class="title is-6">
             เลือกมอนสเตอร์
           </h6>
-          <div class="is-flex" style="justify-content:space-evenly">
-            <a v-for="(mType, index) in database.monsters" :key="index" @click="pickMonster(mType)" class="button is-danger">
-              {{ mType.name }}
-            </a>
+          <div class="level">
+            <div class="level-left">
+              <span v-for="(mType, index) in database.monsters" :key="index" class="level-item">
+                <a @click="pickMonster(mType)" class="button is-danger">
+                  {{ mType.name }}
+                </a>
+              </span>
+            </div>
           </div>
         </div>
         <div v-else>
@@ -24,10 +28,14 @@
           <h6 class="title is-6">
             เลือกฮีโร่
           </h6>
-          <div class="is-flex" style="justify-content:space-evenly">
-            <a v-for="(hType, index) in database.classes" :key="index" @click="pickHero(hType)" class="button is-primary">
-              {{ hType.name }}
-            </a>
+          <div class="level ">
+            <div class="level-left">
+              <span v-for="(hType, index) in database.classes" :key="index" class="level-item">
+                <a @click="pickHero(hType)" class="button is-primary">
+                  {{ hType.name }}
+                </a>
+              </span>
+            </div>
           </div>
         </div>
         <div v-else>
@@ -41,17 +49,19 @@
               พลังป้องกัน : {{ getHeroStat('def') }}<br>
             </p>
             <div class="columns is-multiline">
-              <div class="column is-6-mobile">
-                <div class="columns is-centered">
-                  <div class="column is-4-mobile">
-                    <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
-                      โจมตี
-                    </buton>
-                  </div>
-                  <div class="column is-4-mobile">
-                    <button @click="executeCommand({ command: 'heal' })" class="button is-success">
-                      ฟื้นฟู
-                    </button>
+              <div class="column is-12-mobile">
+                <div class="level is-mobile">
+                  <div class="level-left">
+                    <span class="level-item">
+                      <buton @click="executeCommand({ command: 'attack' })" class="button is-success">
+                        โจมตี
+                      </buton>
+                    </span>
+                    <span class="level-item">
+                      <button @click="executeCommand({ command: 'heal' })" class="button is-success">
+                        ฟื้นฟู
+                      </button>
+                    </span>
                   </div>
                 </div>
               </div>
