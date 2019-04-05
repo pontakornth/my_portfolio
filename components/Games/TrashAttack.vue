@@ -1,6 +1,6 @@
 <template>
   <box class="has-text-centered">
-    <progress :value="progress" class="progress" max="100">
+    <progress :value="progress" class="progress is-success" max="100">
       {{ progress }}%
     </progress>
     <h3 class="title is-2">
