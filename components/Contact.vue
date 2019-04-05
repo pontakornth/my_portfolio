@@ -1,5 +1,5 @@
 <template>
-  <div class="section" style="min-height:25vh;">
+  <div class="section has-background-white" style="min-height:25vh;">
     <div class="has-text-centered container">
       <div>
         <h3 class="title is-3">
