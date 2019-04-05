@@ -2,25 +2,43 @@
   <div class="section">
     <box>
       <h2 class="title is-narrow-desktop">
-        Skill
+        ความสามารถ
       </h2>
     </box>
     <div class="container has-text-centered">
       <div class="columns is-centered">
-        <table class="table is-fullwidth">
-          <thead>
-            <tr>
-              <th>Library/Framework</th>
-              <th>ระดับความสามารถ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(skill, index) in skills" :key="index">
-              <td>{{ skill.name }}</td>
-              <td><Stars :amount="skill.level" /></td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="column is-6">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>เครื่องมือที่ใช้</th>
+                <th>ระดับความสามารถ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(skill, index) in programmingSkills" :key="index">
+                <td>{{ skill.name }}</td>
+                <td><Stars :amount="skill.level" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column is-6">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>ภาษา</th>
+                <th>ระดับความสามารถ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(skill, index) in languageSkills" :key="index">
+                <td>{{ skill.name }}</td>
+                <td><Stars :amount="skill.level" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -33,7 +51,7 @@ export default {
   components: { Box, Stars },
   data() {
     return {
-      skills: [
+      programmingSkills: [
         {
           name: 'React',
           level: 2
@@ -53,6 +71,20 @@ export default {
         {
           name: 'Python',
           level: 3
+        }
+      ],
+      languageSkills: [
+        {
+          name: 'ภาษาไทย',
+          level: 5
+        },
+        {
+          name: 'ภาษาอังกฤษ',
+          level: 3
+        },
+        {
+          name: 'ภาษาสเปน',
+          level: 2
         }
       ]
     }
