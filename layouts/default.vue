@@ -18,6 +18,7 @@
       <div :class="style()">
         <div class="navbar-end">
           <a @click="cheat" class="navbar-item has-text-light"> กดสูตรตรงนี้ </a>
+          <a @click="reset" class="navbar-item has-text-light"> รีเซ็ต </a>
         </div>
       </div>
     </nav>
@@ -26,22 +27,17 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
-  computed: {
-    ...mapGetters({
-      isCompleted: 'game/isCompleted'
-    })
-  },
   methods: {
     ...mapActions({
-      cheat: 'game/cheat'
+      cheat: 'game/cheat',
+      reset: 'game/reset'
     }),
     style() {
       return {
         'navbar-menu': true,
         'is-active': true,
-        'is-hidden': this.isCompleted,
         'has-background-info': true,
         'has-text-light': true
       }
