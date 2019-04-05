@@ -1,0 +1,84 @@
+{
+  "trashes": [
+    {
+      "name": "เศษใบไม้",
+      "type": "wet"
+    },
+    {
+      "name": "ก้างปลา",
+      "type": "wet"
+    },
+    {
+      "name": "อาหารเหลือ",
+      "type": "wet"
+    },
+    {
+      "name": "ขนมปังที่ตกพื้นแล้ว",
+      "type" : "wet"
+    },
+    {
+      "name": "เศษผัก",
+      "type": "wet"
+    },
+    {
+      "name": "กระป๋องน้ำอัดลม",
+      "type": "recycle"
+    },
+    {
+      "name": "ขวดแก้ว",
+      "type": "recycle"
+    },
+    {
+      "name": "ขวดพลาสติก",
+      "type": "recycle"
+    },
+    {
+      "name": "ลังกระดาษ",
+      "type": "recycle"
+    },
+    {
+      "name": "กระดาษแข็ง",
+      "type": "recycle"
+    },
+    {
+      "name": "ขวดยาฆ่าหญ้า",
+      "type": "danger"
+    },
+    {
+      "name": "ขวดยาฆ่าแมลง",
+      "type": "danger"
+    },
+    {
+      "name": "ถ่านไฟฉาย",
+      "type": "danger"
+    },
+    {
+      "name": "สารเคมีอันตรายจากห้องแลป",
+      "type": "danger"
+    },
+    {
+      "name": "สีทาบ้าน",
+      "type": "danger"
+    },
+    {
+      "name": "นาฬิกาหรู",
+      "type": "none"
+    },
+    {
+      "name": "บัตรเสีย",
+      "type": "none"
+    },
+    {
+      "name": "บัตรเขย่ง",
+      "type": "none"
+    },
+    {
+      "name": "เงินสี่พันล้าน",
+      "type": "none"
+    },
+    {
+      "name": "ลุงของพวกเรา",
+      "type": "none"
+    }
+  ]
+}

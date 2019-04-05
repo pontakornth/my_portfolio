@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="section">
     <box>
       <h2 class="title is-narrow-desktop">
         การศึกษา
       </h2>
     </box>
     <div class="columns is-mobile is-multiline" style="min-height:20vh">
-      <div class="column is-12-mobile is-narrow-desktop">
+      <div class="column is-12-mobile is-6-desktop is-2-line">
         <box>
           <p>
             มัธยมศึกษาตอนต้น ห้องเรียนพิเศษวิทย์-คณิต
@@ -16,7 +16,7 @@
           </p>
         </box>
       </div>
-      <div class="column is-12-mobile is-narrow-desktop">
+      <div class="column is-12-mobile is-6-desktop is-2-line">
         <box>
           <p>
             มัธยมศึกษาตอนปลาย สายวิทย์-คณิต
@@ -26,14 +26,14 @@
           </p>
         </box>
       </div>
-      <div class="column is-12-mobile is-narrow-desktop">
+      <div class="column is-12-mobile is-6-desktop is-2-line">
         <box>
           <p>
             เคยได้รับคัดเลือกเป็นนักเรียนแลกเปลี่ยนไปประเทศอาร์เจนตินา ของโครงการ AFS <br> เป็นเวลา 11 เดือน
           </p>
         </box>
       </div>
-      <div class="column is-12-mobile is-narrow-desktop">
+      <div class="column is-12-mobile is-6-desktop is-2-line">
         <box>
           <p>
             ต้องการศึกษาต่อในคณะด้านการทำซอฟต์แวร์คอมพิวเตอร์
@@ -52,4 +52,7 @@ export default {
 </script>
 
 <style>
+.is-2-line {
+  min-height: 2em;
+}
 </style>

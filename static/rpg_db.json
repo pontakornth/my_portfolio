@@ -88,7 +88,7 @@
     {
       "name": "CEO",
       "imageUrl": "undefined",
-      "maxHp": 650,
+      "maxHp": 1500,
       "maxMp": 300,
       "atk": 30,
       "def": 7,
