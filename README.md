@@ -21,7 +21,7 @@ $ yarn run generate
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
 
-## Libraries used:
+## Libraries and frameworks used:
 - NuxtJs
 - Buefy
 - Bulma
